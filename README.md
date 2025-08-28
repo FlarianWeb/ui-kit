@@ -1,2 +1,2 @@
-# ui
+# UI
 Flarian UI component library
