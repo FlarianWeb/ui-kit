@@ -1,0 +1,41 @@
+{
+	"name": "flarian-ui",
+	"type": "module",
+	"version": "0.0.1",
+	"description": "Flarian UI component library",
+	"author": "Flarian",
+	"main": "dist/flarian-ui.es.js",
+	"module": "dist/flarian-ui.es.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc --noEmit && vite build",
+		"typecheck": "vue-tsc --noEmit --pretty",
+		"build:local": "vite build && tar -czf dist.tar.gz dist",
+		"publish:npm": "npm run build && npm publish",
+		"story:dev": "histoire dev",
+		"story:build": "histoire build"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"packageManager": "pnpm@10.6.1",
+	"devDependencies": {
+		"@histoire/plugin-vue": "1.0.0-alpha.3",
+		"@vitejs/plugin-vue": "6.0.1",
+		"flexsearch": "0.8.205",
+		"histoire": "1.0.0-alpha.3",
+		"shiki": "3.12.0",
+		"typescript": "5.9.2",
+		"vite": "7.1.3",
+		"vue": "3.5.20",
+		"vue-tsc": "3.0.6"
+	},
+	"peerDependencies": {
+		"vue": "^3.0.0"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	}
+}
