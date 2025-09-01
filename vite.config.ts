@@ -1,8 +1,8 @@
 /// <reference types="histoire" />
 
 import { defineConfig } from 'vite';
+import { HstVue } from '@histoire/plugin-vue';
 import vue from '@vitejs/plugin-vue';
-import { HstVue } from '@histoire/plugin-vue'
 
 export default defineConfig({
 	plugins: [vue()],
