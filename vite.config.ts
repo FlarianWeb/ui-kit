@@ -1,26 +1,22 @@
-/// <reference types="histoire" />
-
 import { defineConfig } from 'vite';
+import pugPlugin from 'vite-plugin-pug';
 import vue from '@vitejs/plugin-vue';
-import { HstVue } from '@histoire/plugin-vue'
 
 export default defineConfig({
-	plugins: [vue()],
-
-	histoire: {
-		plugins: [HstVue()],
-	},
-
+	plugins: [vue(), pugPlugin({})],
 	build: {
 		lib: {
-			entry: 'src/main.ts',
+			entry: 'src/index.ts',
 			name: 'FlarianUI',
-			fileName: 'flarian-ui',
+			fileName: format => `flarian-ui.${format}.js`,
+			cssFileName: 'styles',
 		},
 		rollupOptions: {
 			external: ['vue'],
 			output: {
-				globals: { vue: 'Vue' },
+				globals: {
+					vue: 'Vue',
+				},
 			},
 		},
 	},

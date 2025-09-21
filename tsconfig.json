@@ -1,20 +1,25 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "ES2020",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "declaration": true,
-    "outDir": "dist",
-
-	"noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"target": "esnext",
+		"lib": ["esnext"],
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"esModuleInterop": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"noUnusedLocals": true,
+		"jsx": "preserve",
+		"resolveJsonModule": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"declaration": true,
+		"declarationMap": true,
+		"types": ["vite/client"]
+	},
+	"vueCompilerOptions": {
+		"plugins": ["@vue/language-plugin-pug"]
+	},
+	"extends": "@vue/tsconfig/tsconfig.json",
+	"include": ["env.d.ts", "src/**/*", "src/**/*.vue", "stories/**/*", "vite.config.ts", "histoire.config.ts"],
+	"exclude": ["node_modules"]
 }
