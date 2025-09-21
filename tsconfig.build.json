@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"skipLibCheck": true,
+		"noEmit": false,
+		"outDir": "dist",
+		"declarationMap": true,
+		"composite": false
+	},
+	"extends": "./tsconfig.json",
+	"include": ["src", "src/**/*.ts", "src/**/*.vue"],
+	"exclude": ["node_modules", "dist"]
+}
